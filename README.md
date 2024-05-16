@@ -98,7 +98,7 @@ echo -e "[Desktop Entry]\nName=dwm\nComment=dynamic window manager\nExec=dwm\nTr
 
 </details><br>
 
-<details open><summary> <b>FONTS</b> for emojis etc</summary>
+<details open><summary> <b>FONTS</b> for emojis</summary>
 pacman -Qe | grep "font\|ttf"
 
 ```
