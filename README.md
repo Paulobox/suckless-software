@@ -98,15 +98,16 @@ echo -e "[Desktop Entry]\nName=dwm\nComment=dynamic window manager\nExec=dwm\nTr
 
 </details><br>
 
-<details><summary> <b>FONTS</b> </summary>
+<details open><summary> <b>FONTS</b> for emojis etc</summary>
 pacman -Qe | grep "font\|ttf"
 
 ```
-fontconfig
-libertinus-font
+ttf-font-awesome
+ttf-dejavu
 noto-fonts
 noto-fonts-emoji
-ttf-font-awesome
+fontconfig
+libertinus-font
 ```
 
 </details></details>
