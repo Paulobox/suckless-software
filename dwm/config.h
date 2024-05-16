@@ -187,6 +187,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+  { MODKEY|ControlMask,             XK_minus, 		  setborderpx,    {.i = -1 } },
+	{ MODKEY|ControlMask,             XK_equal, 		    setborderpx,    {.i = +1 } },
+	{ MODKEY|ControlMask,             XK_0, 	setborderpx,    {.i = 0 } },
+
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
   /* custom (commands)  */
   { MODKEY|ShiftMask,             XK_q,      spawn,          {.v = power_menu } },
