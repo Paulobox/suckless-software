@@ -121,6 +121,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd2[]  = { "kitty", NULL };
 static const char *power_menu[] = { "rofi", "-show", "power-menu", "-modi", "power-menu:~/.local/bin/rofi-power-menu", NULL };
 
 #include "toggleborders.c"
@@ -131,6 +132,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ControlMask,           XK_t, spawn,          {.v = termcmd2 } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
   { MODKEY|ControlMask,             XK_b,      toggleborder,     {0} },
   { MODKEY|ShiftMask,                XK_b,      toggleallborders, {0} },
