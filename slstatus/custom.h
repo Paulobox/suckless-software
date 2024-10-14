@@ -66,21 +66,19 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
     /* function format          argument */
     // { datetime, "%s",           "%F %T" },
-    {cpu_perc, "[ CPU  %s%% ] ", NULL},
-    {ram_used, "[ RAM %s ] ", NULL},
-    // { disk_perc,"HDD  %s%% | ", "/" },
+    {keymap,   "kbd= %s | ", NULL},
+    {cpu_perc, " CPU  %s%% | ", NULL},
+    {ram_used, "RAM %s | ", NULL},
+    { disk_perc,"HDD  %s%% | ", "/" },
     /* { ipv4, "NET  %s | ", "wlp4s0" }, */
     /* {wifi_perc, "NET  %s%% | ", "wlp4s0"}, */
     // { run_command, "VOL  %s | ", "amixer sget Master | awk -F\"[][]\" '/%/
     // { print $2 }' | head -n1 " },
     /* From commandline: pactl list sinks | awk '$1=="Volume:" {print $5}' */
-    {run_command, "[ VOL  %s ] ",
+    {run_command, "VOL  %s | ",
      "pactl list sinks | awk '$1==\"Volume:\" {print $5}' "},
-    {run_command, "[ BRI  %s%% ] ",
-     "cat /sys/class/backlight/nvidia_0/actual_brightness"},
-    {battery_perc, "[ BAT  %s%% ] ", "BAT0"},
-    /* { datetime, " %s ", "%Y-%m-%d  %T" }, */
-    /* {datetime, "[ %s ]", "%H:%M"} */
-    {datetime, "[  %s  ] ", "%d-%m-%Y %a"},
-    {datetime, "[ %s ]", "%I:%M %P"}
+    {battery_perc, "BAT  %s%% | ", "BAT0"},
+    // { datetime, " %s ", "%Y-%m-%d  %T" },
+    {datetime, " %s", "%d-%m-%Y %a |  %H:%M"},
+    /* {datetime, "%s ", " %H:%M"}, */
 };
