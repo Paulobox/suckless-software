@@ -77,6 +77,7 @@ static const struct arg args[] = {
     {run_command, "VOL  %s | ",
      "pactl list sinks | awk '$1==\"Volume:\" {print $5}' "},
     {battery_perc, "BAT  %s%% | ", "BAT0"},
+    {keymap, "KBL _%s | ", NULL},
     // { datetime, " %s ", "%Y-%m-%d  %T" },
     {datetime, " %s", "%d-%m-%Y %a |  %H:%M"},
     /* {datetime, "%s ", " %H:%M"}, */
